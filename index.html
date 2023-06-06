@@ -13,9 +13,7 @@
   </head>
   <body>
     <!-- Navs -->
-    <nav
-      class="navbar bg-transparent navbar-dark navbar-expand-lg fixed-top mt-1"
-    >
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand text-white" href="#">
           <!-- icon for the brand -->
@@ -33,7 +31,6 @@
           </svg>
           Laguna Hotspring System
         </a>
-
         <button
           class="navbar-toggler"
           type="button"
@@ -46,52 +43,101 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end"
+          class="collapse navbar-collapse justify-content-end align-center"
           id="navbarNav"
         >
-          <ul class="navbar-nav">
+          <ul class="navbar-nav text-white">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#Introduction">Search</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#Effects">Profile Account</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#Records">Recommendation</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" href="#Actions">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#FaultLines">Cottege</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#FaultLines">Others</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- navbar actions -->
-    <nav
-      class="navbar navbar-expand-lg bg-transparent navbar-dark fixed-top mt-1"
-    >
-      <div class="container-fluid justify-content-end"></div>
-    </nav>
-    <!-- book button -->
-    <!-- <nav class="navbar bg-transparent navbar-dark fixed-top mt-1">
-      <div class="container-fluid justify-content-end">
-        <div class="navbar-text ml-auto">
-          <button type="submit" class="btn btn-success">Book Now!</button>
-        </div>
-      </div>
-    </nav> -->
 
     <!-- Banner -->
-
-    <img
-      src="assets/pexels-pixabay-258154.jpg"
-      alt="Cover photo"
-      class="banner-img"
-    />
+    <div class="banner position-relative">
+      <img
+        src="assets/pexels-pixabay-258154.jpg"
+        class="img-fluid banner-img"
+        alt="Banner Image"
+      />
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <h1 class="text-center text-white mb-5">Laguna Hot Spring Resort</h1>
+        <div class="text-center">
+          <a href="" class="btn btn-outline-success btn-lg mt-5 text-uppercase"
+            >Book now!</a
+          >
+        </div>
+      </div>
+    </div>
 
     <!-- date -->
+    <div id="calendar"></div>
 
     <!-- recomms -->
+    <section id="Recommendation" class="bg-light mt-5">
+      <div class="container-lg">
+        <div class="lead text-center"><h2>Our best Top services</h2></div>
+        <div class="row my-5 align-items-center justify-content-center">
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Room 1</h4>
+                <p class="lead card-subtitle">Lorem ipsum dolor</p>
+                <p class="display-5 my-4 text-secondary fw-bold">$1,200</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-lg-4">
+            <div class="card border-secondary border-2">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Room 2</h4>
+                <p class="lead card-subtitle">Lorem ipsum dolor</p>
+                <p class="display-5 my-4 text-secondary fw-bold">$1,200</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-8 col-lg-4 col-xl-3">
+            <div class="card border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+              <div class="card-body text-center py-4">
+                <h4 class="card-title">Room 3</h4>
+                <p class="lead card-subtitle">Lorem ipsum dolor</p>
+                <p class="display-5 my-4 text-secondary fw-bold">$1,200</p>
+                <p class="card-text mx-5 text-muted d-none d-lg-block">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+              </div>
+            </div>
+          </div>
+          <!-- end of card -->
+        </div>
+      </div>
+    </section>
 
     <!-- rooms  -->
 
@@ -99,6 +145,17 @@
 
     <!-- others -->
 
+    <!-- script -->
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      var nav = document.querySelector("nav");
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          nav.classList.add("bg-dark", "shadow");
+        } else {
+          nav.classList.remove("bg-dark", "shadow");
+        }
+      });
+    </script>
   </body>
 </html>
