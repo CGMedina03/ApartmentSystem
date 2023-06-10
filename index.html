@@ -13,9 +13,9 @@
   </head>
   <body>
     <!-- Navs -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top text-white">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="#">
+        <a class="navbar-brand" href="#">
           <!-- icon for the brand -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,18 +43,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end align-center"
+          class="collapse navbar-collapse justify-content-center align-center"
           id="navbarNav"
         >
           <ul class="navbar-nav text-white">
             <li class="nav-item">
-              <a class="nav-link" href="#Introduction">Search</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#Effects">Profile Account</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#Records">Recommendation</a>
+              <a class="nav-link" href="#Recommendation">Recommendation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#Actions">Rooms</a>
@@ -65,8 +62,15 @@
             <li class="nav-item">
               <a class="nav-link" href="#FaultLines">Others</a>
             </li>
+            <li class="nav-item"></li>
           </ul>
         </div>
+        <button
+          class="btn btn-secondary btn-lg d-lg-block d-none"
+          type="submit"
+        >
+          Log in
+        </button>
       </div>
     </nav>
 
@@ -95,8 +99,9 @@
       <div class="container-lg">
         <div class="lead text-center"><h2>Our best Top services</h2></div>
         <div class="row my-5 align-items-center justify-content-center">
+          <!-- card 1 -->
           <div class="col-8 col-lg-4 col-xl-3">
-            <div class="card border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card border-0 shadow p-1 mb-3 bg-body-tertiary rounded">
               <div class="card-body text-center py-4">
                 <h4 class="card-title">Room 1</h4>
                 <p class="lead card-subtitle">Lorem ipsum dolor</p>
@@ -105,12 +110,71 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+                <!-- Button trigger modal -->
+                <div class="justify-content-center d-flex my-1 p-1">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#details1"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
+              <!-- more details -->
+              <div
+                class="modal fade"
+                id="details1"
+                tabindex="-1"
+                aria-labelledby="details"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="details1">
+                        Room details 1
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Facilis quas, adipisci cum molestiae, ipsum, nihil sit
+                        illum laborum omnis deleniti iste ab similique pariatur
+                        at provident? Eius perferendis aliquam rerum.
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Book now!
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- card 2 -->
           <div class="col-9 col-lg-4">
-            <div class="card border-secondary border-2">
+            <div class="card border-secondary mb-3 border-2">
               <div class="card-body text-center py-4">
+                <p class="card-header border-0 bg-secondary-subtle">
+                  Best seller
+                </p>
                 <h4 class="card-title">Room 2</h4>
                 <p class="lead card-subtitle">Lorem ipsum dolor</p>
                 <p class="display-5 my-4 text-secondary fw-bold">$1,200</p>
@@ -118,11 +182,67 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+                <!-- Button trigger modal -->
+                <div class="justify-content-center d-flex my-1 p-1">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#details2"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- details for room 2 -->
+            <div
+              class="modal fade"
+              id="details2"
+              tabindex="-1"
+              aria-labelledby="details2"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="details2">
+                      Room details 2
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis quas, adipisci cum molestiae, ipsum, nihil sit
+                      illum laborum omnis deleniti iste ab similique pariatur at
+                      provident? Eius perferendis aliquam rerum.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Book now!
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- card 3 -->
           <div class="col-8 col-lg-4 col-xl-3">
-            <div class="card border-0 shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="card border-0 shadow p-1 mb-3 bg-body-tertiary rounded">
               <div class="card-body text-center py-4">
                 <h4 class="card-title">Room 3</h4>
                 <p class="lead card-subtitle">Lorem ipsum dolor</p>
@@ -131,6 +251,60 @@
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <a href="" class="btn btn-outline-success btn-lg mt-3">Book</a>
+                <!-- Button trigger modal -->
+                <div class="justify-content-center d-flex my-1 p-1">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#details3"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="modal fade"
+              id="details3"
+              tabindex="-1"
+              aria-labelledby="details3"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="details3">
+                      Room details 3
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facilis quas, adipisci cum molestiae, ipsum, nihil sit
+                      illum laborum omnis deleniti iste ab similique pariatur at
+                      provident? Eius perferendis aliquam rerum.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Book now!
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,7 +320,6 @@
     <!-- others -->
 
     <!-- script -->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       var nav = document.querySelector("nav");
       window.addEventListener("scroll", function () {
@@ -157,5 +330,7 @@
         }
       });
     </script>
+    <!-- bootstrap script -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

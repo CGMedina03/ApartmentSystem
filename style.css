@@ -7,3 +7,22 @@
 .navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.8) !important;
 }
+/* Track */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #28a745; /* Bootstrap success color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e7e34; /* Darker shade of success color */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
